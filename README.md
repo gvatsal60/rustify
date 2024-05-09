@@ -1,1 +1,1 @@
-# Rustify [![Rust](https://github.com/gvatsal60/Rustify/actions/workflows/rust-action.yml/badge.svg)](https://github.com/gvatsal60/Rustify/actions/workflows/rust-action.yml)
+# Rustify [![Rust Build, Test, and Publish](https://github.com/gvatsal60/Rustify/actions/workflows/rust-action.yml/badge.svg?branch=master)](https://github.com/gvatsal60/Rustify/actions/workflows/rust-action.yml)
