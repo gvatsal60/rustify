@@ -7,6 +7,14 @@ LABEL MAINTAINER="gvatsal60"
 # Description of the purpose of this image
 LABEL DESCRIPTION="Build Environment"
 
+# Create a group called nonroot
+RUN addgroup -S nonroot \
+    # Add a user named nonroot and assign it to the nonroot group
+    && adduser -S nonroot -G nonroot
+
+# Switch to the nonroot user
+USER nonroot
+
 # Set environment variables for locale
 ENV LC_ALL=en_US.UTF-8
 ENV LANG=en_US.UTF-8
