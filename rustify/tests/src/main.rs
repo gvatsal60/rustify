@@ -40,7 +40,7 @@ mod tests {
         assert_eq!(result, 4);
 
         // Provide different values to make the assertion fail
-        let result_ne = add(3, 1);
+        let result_ne = add(3, 3);
         assert_ne!(result_ne, 4);
     }
 }

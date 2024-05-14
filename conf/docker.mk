@@ -13,10 +13,7 @@ DOCKER_GID ?= $(shell id -g)
 # Arguments to pass to the Docker command for setting user and mounting volumes.
 DOCKER_USER_ARG ?= --user $(DOCKER_UID):$(DOCKER_GID)
 
-# Define the Docker container name // TODO
-# CONTAINER_NAME := myrustapp_container
-
-# Project Settings // TODO
+# Project Settings (Change as per requirement)
 PROJECT_NAME := $(shell basename `git rev-parse --show-toplevel`)
 
 # Name of the Docker image based on the repository root directory name.
@@ -38,8 +35,7 @@ DOCKER_VOL ?= --volume $(shell pwd)/$(PROJECT_NAME):/$(PROJECT_NAME)
 DOCKER_WORK_DIR ?= -w /$(PROJECT_NAME)
 
 # Arguments to pass to the Docker command for building the image.
-# DOCKER_ARG ?= --init --rm --interactive $(DOCKER_USER_ARG) / FIXME
-DOCKER_ARG ?= --init --rm --interactive $(DOCKER_VOL) $(DOCKER_WORK_DIR)
+DOCKER_ARG ?= --init --rm --interactive $(DOCKER_USER_ARG) $(DOCKER_VOL) $(DOCKER_WORK_DIR)
 
 # Check if the Docker container with dependencies is running.
 IF_CONTAINER_RUNS := $(shell docker container inspect -f '{{.State.Running}}' ${DOCKER_DEPS_CONTAINER} 2>/dev/null)
@@ -54,11 +50,11 @@ else
     CONTAINER_STATUS := "Running"
 endif
 
-# Ensure parameter validation // FIXME
-# ifeq ($(strip $(DOCKER_UID)),)
-#     $(error DOCKER_UID is not set)
-# endif
+# Ensure parameter validation
+ifeq ($(strip $(DOCKER_UID)),)
+    $(error DOCKER_UID is not set)
+endif
 
-# ifeq ($(strip $(DOCKER_GID)),)
-#     $(error DOCKER_GID is not set)
-# endif
+ifeq ($(strip $(DOCKER_GID)),)
+    $(error DOCKER_GID is not set)
+endif
