@@ -38,5 +38,9 @@ mod tests {
         // Test basic addition functionality
         let result = add(2, 2);
         assert_eq!(result, 4);
+
+        // Provide different values to make the assertion fail
+        let result_ne = add(3, 1);
+        assert_ne!(result_ne, 4);
     }
 }
