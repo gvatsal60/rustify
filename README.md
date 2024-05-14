@@ -37,7 +37,6 @@ rustify/
 │
 ├── src/              # Source code directory
 │   ├── main.rs       # Entry point for your application
-│   └── lib.rs        # Library file (if creating a library)
 │
 ├── tests/            # Test directory
 |   ├── src/          # Test source code directory
