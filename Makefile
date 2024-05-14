@@ -1,14 +1,8 @@
 # Include configuration files
 include conf/docker.mk
 
-# Define the Rust compiler command
-RUSTC := rustc
-
 # Define the Cargo command
 CARGO := cargo
-
-# Define the Rust source file
-SRC := src
 
 # Define the path to the Dockerfile
 DOCKER_FILE_PATH := dockerfiles/Dockerfile.alpine
