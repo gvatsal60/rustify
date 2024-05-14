@@ -17,7 +17,7 @@ DOCKER_USER_ARG ?= --user $(DOCKER_UID):$(DOCKER_GID)
 # CONTAINER_NAME := myrustapp_container
 
 # Project Settings // TODO
-PROJECT_NAME := project
+PROJECT_NAME := $(shell basename `git rev-parse --show-toplevel`)
 
 # Name of the Docker image based on the repository root directory name.
 DOCKER_BASE_IMG_NAME := $(PROJECT_NAME)

@@ -25,22 +25,22 @@ build-image:
 
 # Target: build
 # Description: Builds the Rust code inside a Docker container
-build: build-image
+docker-build: build-image
 	@$(DOCKER_HOST) container run $(DOCKER_ARG) $(DOCKER_IMG_NAME) "$(CARGO) build"
 
 # Target: test
 # Description: Tests the Rust code inside a Docker container
-test: build-image
+docker-test: build-image
 	@$(DOCKER_HOST) container run $(DOCKER_ARG) $(DOCKER_IMG_NAME) "$(CARGO) test"
 
 # Target: run
 # Description: Runs the Rust code inside a Docker container
-run: build-image
+docker-run: build-image
 	@$(DOCKER_HOST) container run $(DOCKER_ARG) $(DOCKER_IMG_NAME) "$(CARGO) run"
 
 # Target: clean
 # Description: Cleans the Rust build artifacts inside a Docker container
-clean: build-image
+docker-clean: build-image
 	@$(DOCKER_HOST) container run $(DOCKER_ARG) $(DOCKER_IMG_NAME) "$(CARGO) clean"
 
 .PHONY: clean test
