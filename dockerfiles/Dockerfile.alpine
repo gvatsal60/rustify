@@ -1,0 +1,16 @@
+# Use the official Rust image from Docker Hub
+FROM rust:alpine3.19
+
+# Metadata indicating the maintainer of this Dockerfile
+LABEL MAINTAINER="gvatsal60"
+
+# Description of the purpose of this image
+LABEL DESCRIPTION="Build Environment"
+
+# Set environment variables for locale
+ENV LC_ALL=en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US.UTF-8
+
+# Define the default command to run when the container starts
+ENTRYPOINT ["/bin/ash", "-c"]

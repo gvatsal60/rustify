@@ -1,0 +1,15 @@
+# VSCode
+.vscode/*
+
+# Git
+.git/*
+.github/*
+.gitignore
+LICENSE
+README.md
+
+# Docker
+docker/*
+
+# Jenkins
+Jenkinsfile
