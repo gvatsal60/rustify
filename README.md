@@ -41,7 +41,7 @@ rustify/
 │
 ├── tests/            # Test directory
 |   ├── src/          # Test source code directory
-│       └── test.rs   # Example test file
+│       └── lib.rs    # Example test file
 │
 ├── Cargo.toml        # Project manifest file
 ├── README.md         # Project README file
