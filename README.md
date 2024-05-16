@@ -2,10 +2,10 @@
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/gvatsal60/rustify/docker-build-test.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gvatsal60_rustify&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=gvatsal60_rustify)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-green.svg)](https://GitHub.com/gvatsal60/rustify/graphs/commit-activity)
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/gvatsal60/rustify.svg)](https://GitHub.com/gvatsal60/rustify/pull/)
-[![GitHub issues](https://img.shields.io/github/issues/gvatsal60/rustify.svg)](https://GitHub.com/gvatsal60/rustify/issues/)
-[![GitHub forks](https://img.shields.io/github/forks/gvatsal60/rustify.svg)](https://GitHub.com/gvatsal60/rustify/network/)
-[![GitHub stars](https://img.shields.io/github/stars/gvatsal60/rustify.svg)](https://GitHub.com/gvatsal60/rustify/stargazers)
+![GitHub pull-requests](https://img.shields.io/github/issues-pr/gvatsal60/rustify)
+![GitHub Issues](https://img.shields.io/github/issues/gvatsal60/rustify)
+![GitHub forks](https://img.shields.io/github/forks/gvatsal60/rustify)
+![GitHub stars](https://img.shields.io/github/stars/gvatsal60/rustify)
 
 # Rustify - A Rust Project Template
 
