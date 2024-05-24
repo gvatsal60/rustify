@@ -8,13 +8,20 @@ CARGO := cargo
 DOCKER_FILE_PATH := dockerfiles/Dockerfile.alpine
 
 # Define the default target
-.PHONY: all
-all: build
+.PHONY: rename_dir
+
+# Targets
+all: rename_dir build run
+
+# Rule to rename the top-level directory to match PROJECT_NAME
+rename_dir:
+	@if [ ! -d $(PROJECT_NAME) ]; then \
+		mv -v rustify $(PROJECT_NAME); fi
 
 # Target: build-image
 # Description: Builds the Docker image using the specified Dockerfile
 .PHONY: build-image
-build-image:
+build-image: rename_dir
 	@$(DOCKER_HOST) image build -t $(DOCKER_IMG_NAME) -f $(DOCKER_FILE_PATH) $(DOCKER_BUILD_CONTEXT)
 
 # Target: build
