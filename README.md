@@ -1,3 +1,5 @@
+# Rustify - A Rust Project Template
+
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://img.shields.io/github/license/gvatsal60/rustify)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/gvatsal60/rustify/docker-build-test.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gvatsal60_rustify&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=gvatsal60_rustify)
@@ -7,11 +9,10 @@
 ![GitHub forks](https://img.shields.io/github/forks/gvatsal60/rustify)
 ![GitHub stars](https://img.shields.io/github/stars/gvatsal60/rustify)
 
-# Rustify - A Rust Project Template
-
 Welcome to Rustify! 🦀
 
-Rustify is a template for kickstarting your Rust projects. Whether you're a seasoned Rustacean or just getting started with the language, Rustify provides a solid foundation for building reliable and efficient software in Rust.
+Rustify is a template for kickstarting your Rust projects.
+Whether you're a seasoned Rustacean or just getting started with the language, Rustify provides a solid foundation for building reliable and efficient software in Rust.
 
 ## Features
 
@@ -30,11 +31,11 @@ To use Rustify to start a new project, follow these simple steps:
 3. Navigate into your project directory: `cd your-project-name`.
 4. Start coding! 🚀
 
-#### Note: rustify folder name should be same as the root folder name else change the PROJECT_NAME variable.
+## Note: rustify folder name should be same as the root folder name else change the PROJECT_NAME variable
 
 ## Project Structure
 
-```
+```tree
 rustify/
 ├── conf
 │   └── docker.mk              # Makefile include for Docker configuration

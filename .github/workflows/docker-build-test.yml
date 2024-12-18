@@ -18,6 +18,6 @@ jobs:
           sudo systemctl enable docker
           sudo usermod -aG docker ${USER}
       - name: Build
-        run: make docker-build
+        run: make build
       - name: Test
-        run: make docker-test
+        run: make test

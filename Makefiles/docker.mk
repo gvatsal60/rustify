@@ -1,3 +1,5 @@
+include cfg/.env
+
 ## Docker Settings
 DOCKER_HOST = docker
 
@@ -13,9 +15,6 @@ DOCKER_GID ?= $(shell id -g)
 # Arguments to pass to the Docker command for setting user and mounting volumes.
 DOCKER_USER_ARG ?= --user $(DOCKER_UID):$(DOCKER_GID)
 
-# Project Settings (Change as per requirement)
-PROJECT_NAME := $(shell basename `git rev-parse --show-toplevel`)
-
 # Name of the Docker image based on the repository root directory name.
 DOCKER_BASE_IMG_NAME := $(PROJECT_NAME)
 
@@ -29,7 +28,7 @@ DOCKER_IMG_NAME := $(DOCKER_BASE_IMG_NAME):$(DOCKER_IMG_TAG)
 DOCKER_DEPS_IMAGE_BUILD_FLAGS ?= --no-cache=true
 
 # Volume mount configuration for Docker container.
-DOCKER_VOL ?= --volume $(shell pwd)/$(PROJECT_NAME):/$(PROJECT_NAME)
+DOCKER_VOL ?= --volume $(shell pwd):/$(PROJECT_NAME)
 
 # Directory to work within the Docker container.
 DOCKER_WORK_DIR ?= -w /$(PROJECT_NAME)
@@ -58,3 +57,5 @@ endif
 ifeq ($(strip $(DOCKER_GID)),)
     $(error DOCKER_GID is not set)
 endif
+
+.PHONY: all test clean

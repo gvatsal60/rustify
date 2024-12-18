@@ -1,4 +1,7 @@
 {
+  "build": {
+    "dockerfile": "../dockerfiles/Dockerfile.debug"
+  },
   "capAdd": [
     "SYS_PTRACE"
   ],
@@ -80,9 +83,8 @@
       }
     }
   },
-  "image": "mcr.microsoft.com/devcontainers/rust",
   "mounts": [
-    "source=${localWorkspaceFolder}/vs-snippets/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached,readonly"
+    "source=${localWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached,readonly"
   ],
   "postCreateCommand": "chmod +x ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh && ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh",
 }
