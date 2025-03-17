@@ -42,7 +42,7 @@ repos:
       - id: python-use-type-annotations
   # Clang-format for formatting C, C++, and JavaScript files
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: "v19.1.7"
+    rev: "v20.1.0"
     hooks:
       - id: clang-format
   # Runs mypy to check Python type annotations.
@@ -94,7 +94,7 @@ repos:
       - id: gitleaks
   # Talisman for pre-commit Git hooks to detect sensitive files
   - repo: https://github.com/thoughtworks/talisman
-    rev: "v1.32.0"
+    rev: "v1.32.1"
     hooks:
       - id: talisman-commit
         entry: cmd --githook pre-commit
