@@ -12,3 +12,9 @@ target/
 
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
+
+# Ignore pre-commit cache
+.pre-commit-cache/
+
+# Ignore IDE files
+.vscode/
