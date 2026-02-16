@@ -69,7 +69,7 @@ repos:
         types: [shell]
   # Actionlint for linting GitHub Actions YAML files
   - repo: https://github.com/rhysd/actionlint
-    rev: "v1.7.10"
+    rev: "v1.7.11"
     hooks:
       - id: actionlint
   # Yamlfmt for formatting YAML files
@@ -84,7 +84,7 @@ repos:
       - id: codespell
   # Checkmake for linting Makefiles
   - repo: https://github.com/mrtazz/checkmake
-    rev: "0.2.2"
+    rev: "v0.3.0"
     hooks:
       - id: checkmake
   # Gitleaks for detecting secrets in Git repositories
@@ -100,7 +100,7 @@ repos:
         entry: cmd --githook pre-commit
   # Markdownlint for linting Markdown files
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.20.0
+    rev: v0.21.0
     hooks:
       - id: markdownlint-cli2
         args: [--fix]
