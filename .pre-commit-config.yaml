@@ -87,7 +87,6 @@ repos:
     rev: "v0.3.0"
     hooks:
       - id: checkmake
-        args: ['--disable=minphony']
   # Gitleaks for detecting secrets in Git repositories
   - repo: https://github.com/gitleaks/gitleaks
     rev: "v8.30.0"
