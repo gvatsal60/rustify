@@ -42,12 +42,12 @@ repos:
       - id: python-use-type-annotations
   # Clang-format for formatting C, C++, and JavaScript files
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: "v22.1.5"
+    rev: "v22.1.8"
     hooks:
       - id: clang-format
   # Runs mypy to check Python type annotations.
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: "v2.1.0"
+    rev: "v2.3.0"
     hooks:
       - id: mypy
   # ShellCheck hook for linting shell scripts
@@ -79,7 +79,7 @@ repos:
       - id: yamlfmt
   # Codespell for detecting common misspellings in code
   - repo: https://github.com/codespell-project/codespell
-    rev: "v2.4.2"
+    rev: "v2.4.3"
     hooks:
       - id: codespell
   # Checkmake for linting Makefiles
@@ -100,7 +100,7 @@ repos:
         entry: cmd --githook pre-commit
   # Markdownlint for linting Markdown files
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.22.1
+    rev: v0.23.1
     hooks:
       - id: markdownlint-cli2
         args: [--fix]
